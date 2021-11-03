@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plumsail.WEB", "Plumsail.WEB\Plumsail.WEB.csproj", "{BA370654-E068-44CE-AA05-D6CFD6A6751C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plumsail.BLL", "Plumsail.BLL\Plumsail.BLL.csproj", "{925D442C-F960-4C8E-8C1A-9B4E416B1A8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plumsail.DAL", "Plumsail.DAL\Plumsail.DAL.csproj", "{44D721CB-0EDB-4656-8239-49CB8B098917}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{BA370654-E068-44CE-AA05-D6CFD6A6751C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA370654-E068-44CE-AA05-D6CFD6A6751C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA370654-E068-44CE-AA05-D6CFD6A6751C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925D442C-F960-4C8E-8C1A-9B4E416B1A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925D442C-F960-4C8E-8C1A-9B4E416B1A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925D442C-F960-4C8E-8C1A-9B4E416B1A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925D442C-F960-4C8E-8C1A-9B4E416B1A8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D721CB-0EDB-4656-8239-49CB8B098917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D721CB-0EDB-4656-8239-49CB8B098917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D721CB-0EDB-4656-8239-49CB8B098917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D721CB-0EDB-4656-8239-49CB8B098917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
