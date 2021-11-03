@@ -1,8 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Plumsail.BLL;
+using Plumsail.DAL;
+using Plumsail.DAL.Repository;
 
 namespace Plumsail.WEB
 {
@@ -17,7 +21,10 @@ namespace Plumsail.WEB
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            var connection = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<Context>(options => options.UseSqlServer(connection));
+            services.AddTransient<IContactManager, ContactManager>();
+            services.AddTransient<IContactRepository, ContactRepository>();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,7 +43,7 @@ namespace Plumsail.WEB
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthorization();
-            app.UseEndpoints(endpoints => { endpoints.MapRazorPages(); });
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
     }
 }
